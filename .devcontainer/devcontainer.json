@@ -10,7 +10,11 @@
 	// Set *default* container specific settings.json values on container create.
 	"settings": { 
 		"terminal.integrated.shell.linux": "/bin/bash",
-		"php.suggest.basic": false // avoids duplicate autocomplete
+		"php.suggest.basic": false, // avoids duplicate autocomplete
+		"terminal.integrated.allowChords": false,
+		"terminal.integrated.drawBoldTextInBrightColors": false,
+		"terminal.integrated.experimentalLinkProvider": false,
+		"terminal.integrated.rendererType": "auto"
 	},
 
 	// Add the IDs of any extensions you want installed.

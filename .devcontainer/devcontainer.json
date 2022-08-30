@@ -1,0 +1,26 @@
+{
+	"name": "Workshop - Getting Started with WP-CLI",
+
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "wordpress",
+
+	// This should match the active volume mount in docker-compose.yml
+	"workspaceFolder": "/var/www/html",
+
+	// Set *default* container specific settings.json values on container create.
+	"settings": { 
+		"terminal.integrated.shell.linux": "/bin/bash",
+		"php.suggest.basic": false // avoids duplicate autocomplete
+	},
+
+	// Add the IDs of any extensions you want installed.
+	"extensions": [
+		"felixfbecker.php-pack",
+		"wordpresstoolbox.wordpress-toolbox",
+		"johnbillion.vscode-wordpress-hooks"
+	],
+
+	// Sets up WordPress on container start.
+	"postCreateCommand": "/home/wpcli/.devcontainer/wp-setup.sh",
+	"remoteUser": "wpcli"
+}
